@@ -1,4 +1,4 @@
-#https://github.com/Its-LALOL/Python-Helper
+# https://github.com/Its-LALOL/Python-Helper
 
 from random import choice
 from time import sleep
