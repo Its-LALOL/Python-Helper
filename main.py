@@ -31,7 +31,7 @@ def type(text, speed=0.1, input=False):
 		return inputtt()
 	print()
 def clear():
-	if osname=='nt' or osname=='dos':
+	if osname in ['nt', 'dos']:
 		system('cls')
 		return
 	system('clear')
