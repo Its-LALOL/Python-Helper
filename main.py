@@ -22,10 +22,13 @@ def random_chars(amount, english_chars=True, russian_chars=False, numbers=True, 
 	for i in range(amount):
 		text+=choice(chars)
 	return text
-def type(text, speed=0.1):
+inputtt=input
+def type(text, speed=0.1, input=False):
 	for i in text:
 		print(i, end='', flush=True)
 		sleep(speed)
+	if input:
+		return inputtt()
 	print()
 def clear():
 	if osname=='nt' or osname=='dos':
