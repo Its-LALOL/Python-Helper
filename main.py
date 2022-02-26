@@ -1,3 +1,5 @@
+#https://github.com/Its-LALOL/Python-Helper
+
 from random import choice
 from time import sleep
 from os import name as osname, system
