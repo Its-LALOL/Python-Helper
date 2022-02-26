@@ -37,7 +37,10 @@ def clear():
 		system('cls')
 		return
 	system('clear')
-def download(url, name):
+def download(url, name=None):
 	response=urlopen(url)
+	if name is None:
+		try: name=response.headers['Content-Disposition'].replace('attachment; filename=', '')
+		except: raise Exception('Unkown file name.')
 	with open(name, 'wb') as f:
 		f.write(response.read())
