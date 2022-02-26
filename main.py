@@ -1,6 +1,8 @@
 from random import choice
 from time import sleep
 from os import name as osname, system
+try: from urllib.request import urlopen
+except: from urllib2 import urlopen
 
 def random_chars(amount, english_chars=True, russian_chars=False, numbers=True, spec_chars=False, big_chars=True, litte_chars=True):
 	text=''
@@ -35,3 +37,7 @@ def clear():
 		system('cls')
 		return
 	system('clear')
+def download(url, name):
+	response=urlopen(url)
+	with open(name, 'wb') as f:
+		f.write(response.read())
